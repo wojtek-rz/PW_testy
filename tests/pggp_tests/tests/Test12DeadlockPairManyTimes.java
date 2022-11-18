@@ -10,7 +10,7 @@ public class Test12DeadlockPairManyTimes extends Test {
     public Test12DeadlockPairManyTimes() {
         timeOfAuthor = 2545L;
     }
-    public boolean run(Boolean verbose) {
+    public boolean run(int verbose) {
         Action[] firstWorkerActions = new Action[4002];
         Action[] secondWorkerActions = new Action[4002];
 

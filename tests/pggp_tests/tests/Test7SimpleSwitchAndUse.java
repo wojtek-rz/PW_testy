@@ -10,7 +10,7 @@ public class Test7SimpleSwitchAndUse extends Test {
     public Test7SimpleSwitchAndUse() {
         timeOfAuthor = 610L;
     }
-    public boolean run(Boolean verbose) {
+    public boolean run(int verbose) {
         Action[] firstWorkerActions = {
                 enter(0),
                 switchTo(1),

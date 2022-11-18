@@ -9,7 +9,7 @@ public class Test25BigRandom2 extends Test {
     public Test25BigRandom2() {
         timeOfAuthor = 1196L;
     }
-    public boolean run(Boolean verbose) {
+    public boolean run(int verbose) {
         Worker[] workers = new Worker[100];
 
         for (int i = 0; i < 100; i++) {

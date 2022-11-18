@@ -11,7 +11,7 @@ public class Test17StarvationOneLongQueue extends Test {
     public Test17StarvationOneLongQueue() {
         timeOfAuthor = 11129L;
     }
-    public boolean run(Boolean verbose) {
+    public boolean run(int verbose) {
         Action[] workerActions = {
                 enter(0),
                 sleep(20),

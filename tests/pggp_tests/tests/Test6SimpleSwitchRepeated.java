@@ -11,7 +11,7 @@ public class Test6SimpleSwitchRepeated extends Test {
     public Test6SimpleSwitchRepeated() {
         timeOfAuthor = 3L;
     }
-    public boolean run(Boolean verbose) {
+    public boolean run(int verbose) {
         Action[] firstWorkerActions = {
                 enter(0),
                 switchTo(1),

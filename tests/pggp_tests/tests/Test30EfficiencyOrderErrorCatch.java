@@ -20,7 +20,7 @@ public class Test30EfficiencyOrderErrorCatch extends Test {
         timeOfAuthor = 10462L;
     }
 
-    public boolean run(Boolean verbose) {
+    public boolean run(int verbose) {
         Action[] queueActions = {
                 sleep(100),
                 enter(0),

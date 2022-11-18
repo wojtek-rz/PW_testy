@@ -11,7 +11,7 @@ public class Test13DeadlockTriCycle extends Test  {
     public Test13DeadlockTriCycle() {
         timeOfAuthor = 204L;
     }
-    public boolean run(Boolean verbose) {
+    public boolean run(int verbose) {
         Action[] firstWorkerActions = {
                 enter(0),
                 sleep(100),

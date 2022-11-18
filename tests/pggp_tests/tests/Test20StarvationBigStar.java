@@ -11,7 +11,7 @@ public class Test20StarvationBigStar extends Test {
     public Test20StarvationBigStar() {
         timeOfAuthor = 6680L;
     }
-    public boolean run(Boolean verbose) {
+    public boolean run(int verbose) {
         Worker[] workers = new Worker[100];
         Action[] workerActions = {
                 enter(0),

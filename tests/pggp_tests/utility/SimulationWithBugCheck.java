@@ -19,7 +19,7 @@ import java.util.concurrent.*;
 public class SimulationWithBugCheck implements Workshop {
     private final Semaphore mutex; // Mutex for internal use of SimulationWithBugCheck class.
     private final Workshop wrappedWorkshop;
-    public final Boolean verbose;
+    public final Integer verbose;
 
     public volatile boolean errorBoolean = false;
 
@@ -118,7 +118,7 @@ public class SimulationWithBugCheck implements Workshop {
     public SimulationWithBugCheck(int numberOfWorkplaces,
                                   int timeOfOneWork,
                                   Worker[] workers,
-                                  boolean verbose,
+                                  int verbose,
                                   boolean doCheckLiveliness) {
 
         this.mutex = new Semaphore(1, true); // Mutex used by the simulation.

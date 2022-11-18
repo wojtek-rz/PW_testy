@@ -10,7 +10,7 @@ public class Test23BigRandomRotations extends Test {
         timeOfAuthor = 125L;
     }
 
-    public boolean run(Boolean verbose) {
+    public boolean run(int verbose) {
         Worker[] workers = new Worker[20];
 
         for (int i = 0; i < 20; i++) {

@@ -11,7 +11,7 @@ public class Test8SimpleQueueAndUse extends Test {
         timeOfAuthor = 389L;
     }
     @Override
-    public boolean run(Boolean verbose) {
+    public boolean run(int verbose) {
         Action[] workerActions = {
                 sleep(30),
                 enter(0),

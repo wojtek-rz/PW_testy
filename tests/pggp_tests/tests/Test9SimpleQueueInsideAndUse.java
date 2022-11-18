@@ -11,7 +11,7 @@ public class Test9SimpleQueueInsideAndUse extends Test {
     public Test9SimpleQueueInsideAndUse() {
         timeOfAuthor = 204L;
     }
-    public boolean run(Boolean verbose) {
+    public boolean run(int verbose) {
         Action[] firstWorkerActions = {
                 enter(0),
                 use(),

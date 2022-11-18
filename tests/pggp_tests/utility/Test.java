@@ -158,7 +158,7 @@ public abstract class Test {
         return concat(new Action[]{action}, array2);
     }
 
-    public abstract boolean run(Boolean verbose);
+    public abstract boolean run(int verbose);
 
     public Long getTimeOfAuthor() {
         return timeOfAuthor;
