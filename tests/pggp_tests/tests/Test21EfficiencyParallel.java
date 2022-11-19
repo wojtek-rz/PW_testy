@@ -8,7 +8,7 @@ import cp2022.tests.pggp_tests.utility.workshop_actions.Action;
 public class Test21EfficiencyParallel extends Test {
     // Jest 5 stanowisk i po 1 osobie, która chce wejść na każde z nich. Praca trwa 500ms. Limit czasu: 1 sekunda.
     public Test21EfficiencyParallel(){
-        timeLimit = 1000L;
+        timeLimit = 4000L;
         timeOfAuthor = 501L;
     }
     private Worker worker(int i) {

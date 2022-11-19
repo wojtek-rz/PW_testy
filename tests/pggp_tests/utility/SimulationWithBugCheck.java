@@ -94,6 +94,10 @@ public class SimulationWithBugCheck implements Workshop {
                 mutex.acquire();
                 WorkerId workplaceOwnerId = workshop.workplaceToOwnerLazy.get(this.id);
                 WorkerId currentWorkerId = workshop.getWorkerIdOfCurrentThread();
+                if (verbose == 2) {
+                    Thread.sleep(timeOfWork / 2);
+                    System.out.println("Worker " + currentWorkerId.id + " starts using workplace " + id.id);
+                }
 
                 // We check whether our worker posses workplace we want to work on.
                 if(workplaceOwnerId != currentWorkerId) {
@@ -106,6 +110,7 @@ public class SimulationWithBugCheck implements Workshop {
                 // We increase stored number of usages.
                 usagesOfWorkplace.put(this.id, usagesOfWorkplace.get(this.id) + 1);
 
+                if (verbose == 2) System.out.println("Worker " + currentWorkerId.id + " stops using workplace " + id.id );
                 mutex.release();
                 Thread.sleep(timeOfWork);
             } catch (InterruptedException e) {

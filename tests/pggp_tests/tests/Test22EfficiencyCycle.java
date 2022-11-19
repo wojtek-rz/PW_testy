@@ -7,7 +7,7 @@ import cp2022.tests.pggp_tests.utility.Worker;
 public class Test22EfficiencyCycle extends Test {
     // Dużo rzeczy, które chcą chodzić po tym samym 5-cyklu. Z limitem czasu.
     public Test22EfficiencyCycle() {
-        timeLimit = 7000L;
+        timeLimit = 10000L;
         timeOfAuthor = 4232L;
     }
 

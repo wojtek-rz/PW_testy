@@ -47,7 +47,7 @@ public abstract class Test {
         Action[] actions = new Action[len];
         actions[0] = enter(begin);
         for (int i = 1; i < len - 1; i += 2) {
-            actions[i] = switchTo(first + (begin + i) % (last - first + 1));
+            actions[i] = switchTo(first + (begin + (i/2)) % (last - first + 1));
             actions[i + 1] = use();
         }
         actions[len - 1] = leave();

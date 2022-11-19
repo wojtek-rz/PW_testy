@@ -10,9 +10,6 @@ public class Use implements Action{
         if(verbose == 1) System.out.println(
                 "Worker " + worker.id.id + " invokes use() on workplace " +
                         workshop.getWorkplaceIntId(worker.getCurrentWorkplace()) + ".");
-        if(verbose == 2) System.out.println(
-                "Worker " + worker.id.id + " starts using workplace " +
-                        workshop.getWorkplaceIntId(worker.getCurrentWorkplace()));
         Workplace workplace = worker.getCurrentWorkplace();
         int usages = workshop.getUsages(workplace.getId());
         workplace.use();
@@ -25,8 +22,5 @@ public class Use implements Action{
         if(verbose == 1) System.out.println(
                 "Worker " + worker.id.id + " finished use() on workplace " +
                         workshop.getWorkplaceIntId(worker.getCurrentWorkplace()) + ".");
-        if(verbose == 2) System.out.println(
-                "Worker " + worker.id.id + " stops using workplace " +
-                        workshop.getWorkplaceIntId(worker.getCurrentWorkplace()));
     }
 }
