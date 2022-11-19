@@ -13,7 +13,7 @@ public class TestFor2N extends Test {
     public boolean run(int verbose) {
         Action[] firstWorkerActions = {
                 enter(0),
-                sleep(2000),
+                sleep(3000),
                 leave()
         };
         Action[] secondWorker = {
