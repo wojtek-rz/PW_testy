@@ -1,149 +1,70 @@
-/usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -javaagent:/home/wojtek/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/222.4345.14/lib/idea_rt.jar=33005:/home/wojtek/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/222.4345.14/bin -Dfile.encoding=UTF-8 -classpath /home/wojtek/IdeaProjects/cp2022/out/production/cp2022 cp2022.tests.pggp_tests.Main
-Parameter verbose = 2. It can be changed in the code of the tests to print the logs.
-If the test doesn't check the order of events, the order of logs may not be true.
-
-Test 1 (author's time 34046ms)
-Worker 8 tries to enter the workshop and occupy workplace 0
-{Thread[Worker 8 thread.,5,main]=2}
-Worker 8 now occupies workplace 0
-Worker 6 tries to enter the workshop and occupy workplace 0
-{Thread[Worker 6 thread.,5,main]=2}
-Worker 2 tries to enter the workshop and occupy workplace 1
-{Thread[Worker 2 thread.,5,main]=2, Thread[Worker 6 thread.,5,main]=3}
-Worker 2 now occupies workplace 1
-Worker 1 tries to enter the workshop and occupy workplace 0
-{Thread[Worker 1 thread.,5,main]=2, Thread[Worker 6 thread.,5,main]=4}
-Worker 4 tries to enter the workshop and occupy workplace 0
-{Thread[Worker 4 thread.,5,main]=2, Thread[Worker 1 thread.,5,main]=3, Thread[Worker 6 thread.,5,main]=5}
-Worker 9 tries to enter the workshop and occupy workplace 4
-{Thread[Worker 4 thread.,5,main]=3, Thread[Worker 1 thread.,5,main]=4, Thread[Worker 6 thread.,5,main]=6, Thread[Worker 9 thread.,5,main]=2}
-Worker 9 now occupies workplace 4
-Worker 7 tries to enter the workshop and occupy workplace 0
-{Thread[Worker 4 thread.,5,main]=4, Thread[Worker 7 thread.,5,main]=2, Thread[Worker 1 thread.,5,main]=5, Thread[Worker 6 thread.,5,main]=7}
-Worker 0 tries to enter the workshop and occupy workplace 1
-{Thread[Worker 4 thread.,5,main]=5, Thread[Worker 0 thread.,5,main]=2, Thread[Worker 7 thread.,5,main]=3, Thread[Worker 1 thread.,5,main]=6, Thread[Worker 6 thread.,5,main]=8}
+Worker 1 tries to enter the workshop and occupy workplace 3
+Worker 1 now occupies workplace 3
+Worker 3 tries to enter the workshop and occupy workplace 1
+Worker 3 now occupies workplace 1
+Worker 2 tries to enter the workshop and occupy workplace 3
+Worker 4 tries to enter the workshop and occupy workplace 1
+Worker 6 tries to enter the workshop and occupy workplace 3
 Worker 5 tries to enter the workshop and occupy workplace 1
-{Thread[Worker 4 thread.,5,main]=6, Thread[Worker 0 thread.,5,main]=3, Thread[Worker 7 thread.,5,main]=4, Thread[Worker 1 thread.,5,main]=7, Thread[Worker 6 thread.,5,main]=9, Thread[Worker 5 thread.,5,main]=2}
-Worker 3 tries to enter the workshop and occupy workplace 3
-{Thread[Worker 3 thread.,5,main]=2, Thread[Worker 4 thread.,5,main]=7, Thread[Worker 0 thread.,5,main]=4, Thread[Worker 7 thread.,5,main]=5, Thread[Worker 1 thread.,5,main]=8, Thread[Worker 6 thread.,5,main]=10, Thread[Worker 5 thread.,5,main]=3}
+Worker 3 starts using workplace 1
+Worker 3 stops using workplace 1
+Worker 3 tries to switch its workplace to workplace 3
+Worker 4 now occupies workplace 1
+Worker 1 starts using workplace 3
+Worker 1 stops using workplace 3
+Worker 1 tries to switch its workplace to workplace 1
 Worker 3 now occupies workplace 3
-Worker 8 tries to switch its workplace to workplace 4
-Worker 6 now occupies workplace 0
-Worker 2 leaves the workshop
-Worker 0 now occupies workplace 1
-Worker 9 leaves the workshop
-Worker 8 now occupies workplace 4
-Worker 3 leaves the workshop
-Worker 6 tries to switch its workplace to workplace 0
-Worker 6 now occupies workplace 0
-Worker 2 tries to enter the workshop and occupy workplace 1
-{Thread[Worker 2 thread.,5,main]=2, Thread[Worker 4 thread.,5,main]=8, Thread[Worker 7 thread.,5,main]=6, Thread[Worker 1 thread.,5,main]=9, Thread[Worker 5 thread.,5,main]=4}
-Worker 0 leaves the workshop
-Worker 5 now occupies workplace 1
-Worker 9 tries to enter the workshop and occupy workplace 0
-{Thread[Worker 2 thread.,5,main]=3, Thread[Worker 4 thread.,5,main]=9, Thread[Worker 7 thread.,5,main]=7, Thread[Worker 1 thread.,5,main]=10, Thread[Worker 9 thread.,5,main]=2}
-Worker 8 leaves the workshop
-Worker 3 tries to enter the workshop and occupy workplace 0
-Worker 6 leaves the workshop
-Worker 1 now occupies workplace 0
-{Thread[Worker 3 thread.,5,main]=2, Thread[Worker 2 thread.,5,main]=4, Thread[Worker 4 thread.,5,main]=10, Thread[Worker 7 thread.,5,main]=8, Thread[Worker 9 thread.,5,main]=3}
-Worker 0 tries to enter the workshop and occupy workplace 1
-Worker 5 tries to switch its workplace to workplace 1
-Worker 5 now occupies workplace 1
-Worker 8 tries to enter the workshop and occupy workplace 2
-Worker 6 tries to enter the workshop and occupy workplace 1
-Worker 1 leaves the workshop
-Worker 4 now occupies workplace 0
-{Thread[Worker 3 thread.,5,main]=3, Thread[Worker 2 thread.,5,main]=5, Thread[Worker 0 thread.,5,main]=2, Thread[Worker 7 thread.,5,main]=9, Thread[Worker 9 thread.,5,main]=4}
-{Thread[Worker 3 thread.,5,main]=4, Thread[Worker 8 thread.,5,main]=2, Thread[Worker 2 thread.,5,main]=6, Thread[Worker 0 thread.,5,main]=3, Thread[Worker 7 thread.,5,main]=10, Thread[Worker 9 thread.,5,main]=5}
-Worker 8 now occupies workplace 2
-Worker 5 tries to switch its workplace to workplace 4
-Worker 5 now occupies workplace 4
-Worker 2 now occupies workplace 1
-Worker 1 tries to enter the workshop and occupy workplace 1
-Worker 4 tries to switch its workplace to workplace 4
-Worker 7 now occupies workplace 0
-{Thread[Worker 3 thread.,5,main]=5, Thread[Worker 4 thread.,5,main]=2, Thread[Worker 0 thread.,5,main]=4, Thread[Worker 9 thread.,5,main]=6, Thread[Worker 6 thread.,5,main]=2}
-{Thread[Worker 3 thread.,5,main]=6, Thread[Worker 4 thread.,5,main]=3, Thread[Worker 0 thread.,5,main]=5, Thread[Worker 1 thread.,5,main]=2, Thread[Worker 9 thread.,5,main]=7, Thread[Worker 6 thread.,5,main]=3}
-Worker 8 tries to switch its workplace to workplace 0
-Worker 5 leaves the workshop
-Worker 4 now occupies workplace 4
-Worker 2 leaves the workshop
-Worker 0 now occupies workplace 1
-Worker 7 tries to switch its workplace to workplace 0
-Worker 7 now occupies workplace 0
-Worker 5 tries to enter the workshop and occupy workplace 4
-{Thread[Worker 3 thread.,5,main]=7, Thread[Worker 8 thread.,5,main]=2, Thread[Worker 1 thread.,5,main]=3, Thread[Worker 9 thread.,5,main]=8, Thread[Worker 6 thread.,5,main]=4, Thread[Worker 5 thread.,5,main]=2}
-Worker 4 leaves the workshop
-Worker 5 now occupies workplace 4
-Worker 2 tries to enter the workshop and occupy workplace 4
-{Thread[Worker 3 thread.,5,main]=8, Thread[Worker 8 thread.,5,main]=3, Thread[Worker 2 thread.,5,main]=2, Thread[Worker 1 thread.,5,main]=4, Thread[Worker 9 thread.,5,main]=9, Thread[Worker 6 thread.,5,main]=5}
-Worker 0 leaves the workshop
-Worker 6 now occupies workplace 1
-Worker 7 leaves the workshop
-Worker 9 now occupies workplace 0
-Worker 4 tries to enter the workshop and occupy workplace 3
-{Thread[Worker 3 thread.,5,main]=9, Thread[Worker 8 thread.,5,main]=4, Thread[Worker 2 thread.,5,main]=3, Thread[Worker 4 thread.,5,main]=2, Thread[Worker 1 thread.,5,main]=5}
-Worker 4 now occupies workplace 3
-Worker 5 leaves the workshop
-Worker 2 now occupies workplace 4
-Worker 0 tries to enter the workshop and occupy workplace 1
-{Thread[Worker 3 thread.,5,main]=10, Thread[Worker 8 thread.,5,main]=5, Thread[Worker 0 thread.,5,main]=2, Thread[Worker 1 thread.,5,main]=6}
-Worker 6 leaves the workshop
+Worker 4 starts using workplace 1
+Worker 4 stops using workplace 1
+Worker 4 tries to switch its workplace to workplace 3
 Worker 1 now occupies workplace 1
-Worker 7 tries to enter the workshop and occupy workplace 0
-Worker 9 leaves the workshop
-Worker 3 now occupies workplace 0
-{Thread[Worker 8 thread.,5,main]=6, Thread[Worker 0 thread.,5,main]=3, Thread[Worker 7 thread.,5,main]=2}
+Worker 3 starts using workplace 3
+Worker 3 stops using workplace 3
+Worker 3 tries to switch its workplace to workplace 1
+Worker 4 now occupies workplace 3
+Worker 1 starts using workplace 1
+Worker 1 stops using workplace 1
+Worker 1 tries to switch its workplace to workplace 3
+Worker 3 now occupies workplace 1
+Worker 4 starts using workplace 3
+Worker 4 stops using workplace 3
 Worker 4 leaves the workshop
-Worker 5 tries to enter the workshop and occupy workplace 0
-{Thread[Worker 8 thread.,5,main]=7, Thread[Worker 0 thread.,5,main]=4, Thread[Worker 7 thread.,5,main]=3, Thread[Worker 5 thread.,5,main]=2}
-Worker 2 tries to switch its workplace to workplace 4
-Worker 2 now occupies workplace 4
-Worker 6 tries to enter the workshop and occupy workplace 4
-{Thread[Worker 8 thread.,5,main]=8, Thread[Worker 0 thread.,5,main]=5, Thread[Worker 7 thread.,5,main]=4, Thread[Worker 5 thread.,5,main]=3, Thread[Worker 6 thread.,5,main]=2}
-Worker 1 tries to switch its workplace to workplace 0
-Worker 0 now occupies workplace 1
-Worker 9 tries to enter the workshop and occupy workplace 1
-{Thread[Worker 8 thread.,5,main]=9, Thread[Worker 7 thread.,5,main]=5, Thread[Worker 1 thread.,5,main]=2, Thread[Worker 5 thread.,5,main]=4, Thread[Worker 6 thread.,5,main]=3, Thread[Worker 9 thread.,5,main]=2}
-Worker 3 tries to switch its workplace to workplace 4
-Worker 8 now occupies workplace 0
-Worker 4 tries to enter the workshop and occupy workplace 2
-{Thread[Worker 3 thread.,5,main]=2, Thread[Worker 4 thread.,5,main]=2, Thread[Worker 7 thread.,5,main]=6, Thread[Worker 1 thread.,5,main]=3, Thread[Worker 5 thread.,5,main]=5, Thread[Worker 6 thread.,5,main]=4, Thread[Worker 9 thread.,5,main]=3}
-Worker 4 now occupies workplace 2
-Worker 2 tries to switch its workplace to workplace 0
-Worker 6 now occupies workplace 4
-Worker 0 leaves the workshop
-Worker 9 now occupies workplace 1
-Worker 8 leaves the workshop
-Worker 7 now occupies workplace 0
-Worker 4 leaves the workshop
-Worker 6 tries to switch its workplace to workplace 3
-Worker 0 tries to enter the workshop and occupy workplace 2
-{Thread[Worker 3 thread.,5,main]=3, Thread[Worker 2 thread.,5,main]=2, Thread[Worker 0 thread.,5,main]=2, Thread[Worker 1 thread.,5,main]=4, Thread[Worker 5 thread.,5,main]=6}
-Worker 0 now occupies workplace 2
-Worker 9 leaves the workshop
-Worker 8 tries to enter the workshop and occupy workplace 0
-{Thread[Worker 3 thread.,5,main]=4, Thread[Worker 8 thread.,5,main]=2, Thread[Worker 2 thread.,5,main]=3, Thread[Worker 1 thread.,5,main]=5, Thread[Worker 5 thread.,5,main]=7}
-Worker 7 leaves the workshop
-Worker 5 now occupies workplace 0
-Worker 4 tries to enter the workshop and occupy workplace 0
-{Thread[Worker 3 thread.,5,main]=5, Thread[Worker 8 thread.,5,main]=3, Thread[Worker 2 thread.,5,main]=4, Thread[Worker 4 thread.,5,main]=2, Thread[Worker 1 thread.,5,main]=6}
-Worker 0 leaves the workshop
-Worker 9 tries to enter the workshop and occupy workplace 3
-{Thread[Worker 3 thread.,5,main]=6, Thread[Worker 8 thread.,5,main]=4, Thread[Worker 2 thread.,5,main]=5, Thread[Worker 4 thread.,5,main]=3, Thread[Worker 1 thread.,5,main]=7, Thread[Worker 9 thread.,5,main]=2}
-Worker 9 now occupies workplace 3
-Worker 7 tries to enter the workshop and occupy workplace 1
-{Thread[Worker 3 thread.,5,main]=7, Thread[Worker 8 thread.,5,main]=5, Thread[Worker 2 thread.,5,main]=6, Thread[Worker 4 thread.,5,main]=4, Thread[Worker 7 thread.,5,main]=2, Thread[Worker 1 thread.,5,main]=8}
-Worker 7 now occupies workplace 1
-Worker 5 tries to switch its workplace to workplace 1
-Worker 0 tries to enter the workshop and occupy workplace 0
-{Thread[Worker 3 thread.,5,main]=8, Thread[Worker 8 thread.,5,main]=6, Thread[Worker 2 thread.,5,main]=7, Thread[Worker 4 thread.,5,main]=5, Thread[Worker 0 thread.,5,main]=2, Thread[Worker 1 thread.,5,main]=9}
-Worker 9 tries to switch its workplace to workplace 2
-Worker 9 now occupies workplace 2
-Worker 7 tries to switch its workplace to workplace 3
-Worker 9 leaves the workshop
-Worker 9 tries to enter the workshop and occupy workplace 3
-{Thread[Worker 3 thread.,5,main]=9, Thread[Worker 8 thread.,5,main]=7, Thread[Worker 2 thread.,5,main]=8, Thread[Worker 4 thread.,5,main]=6, Thread[Worker 0 thread.,5,main]=3, Thread[Worker 1 thread.,5,main]=10, Thread[Worker 9 thread.,5,main]=2}
-Worker 9 now occupies workplace 3
-Worker 9 tries to switch its workplace to workplace 0
+Worker 1 now occupies workplace 3
+Worker 1 starts using workplace 3
+Worker 1 stops using workplace 3
+Worker 3 starts using workplace 1
+Worker 3 stops using workplace 1
+Worker 1 tries to switch its workplace to workplace 1
+Worker 2 now occupies workplace 3
+Worker 3 tries to switch its workplace to workplace 3
+Worker 1 now occupies workplace 1
+Worker 2 starts using workplace 3
+Worker 2 stops using workplace 3
+Worker 2 tries to switch its workplace to workplace 1
+Worker 3 now occupies workplace 3
+Worker 1 starts using workplace 1
+Worker 1 stops using workplace 1
+Worker 1 leaves the workshop
+Worker 2 now occupies workplace 1
+Worker 2 starts using workplace 1
+Worker 2 stops using workplace 1
+Worker 3 starts using workplace 3
+Worker 3 stops using workplace 3
+Worker 2 leaves the workshop
+Worker 5 now occupies workplace 1
+Worker 3 leaves the workshop
+Worker 6 now occupies workplace 3
+Worker 5 starts using workplace 1
+Worker 5 stops using workplace 1
+Worker 6 starts using workplace 3
+Worker 6 stops using workplace 3
+Worker 5 tries to switch its workplace to workplace 3
+Worker 6 tries to switch its workplace to workplace 1
+Worker 6 now occupies workplace 1
+Worker 5 now occupies workplace 3
+Worker 5 starts using workplace 3
+Worker 5 stops using workplace 3
+Worker 6 starts using workplace 1
+Worker 6 stops using workplace 1
+Worker 5 leaves the workshop
+Worker 6 leaves the workshop

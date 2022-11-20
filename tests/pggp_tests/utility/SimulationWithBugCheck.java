@@ -95,7 +95,6 @@ public class SimulationWithBugCheck implements Workshop {
                 WorkerId workplaceOwnerId = workshop.workplaceToOwnerLazy.get(this.id);
                 WorkerId currentWorkerId = workshop.getWorkerIdOfCurrentThread();
                 if (verbose == 2) {
-                    Thread.sleep(timeOfWork);
                     System.out.println("Worker " + currentWorkerId.id + " starts using workplace " + id.id);
                 }
 
