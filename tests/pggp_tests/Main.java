@@ -4,12 +4,13 @@ import cp2022.tests.pggp_tests.utility.SimulationWithBugCheck;
 import cp2022.tests.pggp_tests.utility.Test;
 import cp2022.tests.pggp_tests.wojteks_tests.TestDeadlock2Simple;
 import cp2022.tests.pggp_tests.wojteks_tests.TestDeadlock2Simple2;
+import cp2022.tests.pggp_tests.wojteks_tests.TestDeadlock2Simple3;
 import cp2022.tests.pggp_tests.wojteks_tests.TestFor2NSimple;
 
 public class Main {
     public static void main(String[] args) {
         // If you want to log information, change to 1 or 2
-        int verbose = 2;
+        int verbose = 0;
 
         System.out.println("Parameter verbose = " + verbose + ". It can be changed in the code of the tests to print the logs.");
 
@@ -56,7 +57,8 @@ public class Main {
 
                 new TestFor2NSimple(),
                 new TestDeadlock2Simple(),
-                new TestDeadlock2Simple2()
+                new TestDeadlock2Simple2(),
+                new TestDeadlock2Simple3(),
         };
 
         int i = 1;
