@@ -16,6 +16,7 @@ public class Test19StarvationManyQueues extends Test {
         Action[] workerActions = {
                 enter(workplace),
                 sleep(15),
+                use(),
                 leave()
         };
         return new Worker(nr, workerActions);

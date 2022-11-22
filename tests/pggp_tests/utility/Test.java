@@ -77,17 +77,20 @@ public abstract class Test {
 
     // Worker jumps between workplaces wid1 and wid2.
     protected Action[] jumpBetween(int wid1, int wid2, int times) {
-        Action[] actions = new Action[times + 1];
+        Action[] actions = new Action[2*times + 1];
         actions[0] = enter(wid1);
-        for (int i = 1; i < times; i++) {
-            if(i % 2 == 1) {
+        actions[1] = use();
+        for (int i = 2; i < 2*times; i+=2) {
+            if(i % 4 == 2) {
                 actions[i] = switchTo(wid2);
+                actions[i + 1] = use();
             }
             else {
                 actions[i] = switchTo(wid1);
+                actions[i + 1] = use();
             }
         }
-        actions[times] = leave();
+        actions[2 * times] = leave();
         return actions;
     }
 

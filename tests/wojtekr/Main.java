@@ -1,9 +1,10 @@
-package cp2022.tests.pggp_tests;
+package cp2022.tests.wojtekr;
 
 import cp2022.tests.pggp_tests.utility.SimulationWithBugCheck;
 import cp2022.tests.pggp_tests.utility.Test;
-import cp2022.tests.pggp_tests.tests.*;
+import cp2022.tests.wojtekr.wojteks_tests.*;
 
+// Important note: tests based on the pggp tests utility.
 public class Main {
     public static void main(String[] args) {
         // If you want to log information, change to 1 or 2
@@ -21,36 +22,11 @@ public class Main {
         SimulationWithBugCheck.timeOfWaitBetweenActionsWhenOrderMatters = 30;
 
         Test[] tests = {
-                new Test1SimpleOneWorkplace(),
-                new Test2SimpleQueue(),
-                new Test3SimpleOneUse(),
-                new Test4SimpleOneUseRepeated(),
-                new Test5SimpleSwitch(),
-                new Test6SimpleSwitchRepeated(),
-                new Test7SimpleSwitchAndUse(),
-                new Test8SimpleQueueAndUse(),
-                new Test9SimpleQueueInsideAndUse(),
-                new Test10SimpleOneStaysOneMoves(),
-                new Test11DeadlockPair(),
-                new Test12DeadlockPairManyTimes(),
-                new Test13DeadlockTriCycle(),
-                new Test14DeadlockTriCycleManyTimes(),
-                new Test15DeadlockOneBigOneSmallCycleWithCommonVertex(),
-                new Test16StarvationTricycleAndQueue(),
-                new Test17StarvationOneLongQueue(),
-                new Test18StarvationStar(),
-                new Test19StarvationManyQueues(),
-                new Test20StarvationBigStar(),
-                new Test21EfficiencyParallel(),
-                new Test22EfficiencyCycle(),
-                new Test23BigRandomRotations(),
-                new Test24BigRandom1(),
-                new Test25BigRandom2(),
-                new Test26BigRandomStarvation(),
-                new Test27BigRandom3(),
-                new Test28BigRandom4(),
-                new Test29BigRandom5(),
-                new Test30EfficiencyOrderErrorCatch(),
+                new TestFor2NSimple(),
+                new TestDeadlock2Simple(),
+                new TestDeadlock2Simple2(),
+                new TestDeadlock2Simple3(),
+                new TestDeadlock2Simple4(),
         };
 
         int i = 1;

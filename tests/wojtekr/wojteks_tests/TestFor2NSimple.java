@@ -1,4 +1,4 @@
-package cp2022.tests.pggp_tests.wojteks_tests;
+package cp2022.tests.wojtekr.wojteks_tests;
 
 import cp2022.tests.pggp_tests.utility.SimulationWithBugCheck;
 import cp2022.tests.pggp_tests.utility.Test;
@@ -8,7 +8,8 @@ import cp2022.tests.pggp_tests.utility.workshop_actions.Action;
 public class TestFor2NSimple extends Test {
     // Jeden pracownik zmienia miejsca pracy i używa ich.
     public TestFor2NSimple() {
-        timeOfAuthor = 610L;
+        timeOfAuthor = 2704L;
+        timeLimit = 3 * timeOfAuthor;
     }
     public boolean run(int verbose) {
         Action[] firstWorkerActions = {

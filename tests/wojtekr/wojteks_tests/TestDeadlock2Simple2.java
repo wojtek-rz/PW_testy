@@ -1,4 +1,4 @@
-package cp2022.tests.pggp_tests.wojteks_tests;
+package cp2022.tests.wojtekr.wojteks_tests;
 
 import cp2022.tests.pggp_tests.utility.SimulationWithBugCheck;
 import cp2022.tests.pggp_tests.utility.Test;
@@ -7,7 +7,8 @@ import cp2022.tests.pggp_tests.utility.workshop_actions.Action;
 
 public class TestDeadlock2Simple2 extends Test {
         public TestDeadlock2Simple2() {
-            timeOfAuthor = 610L;
+            timeOfAuthor = 3166L;
+            timeLimit = 3 * timeOfAuthor;
         }
     public boolean run(int verbose) {
             // Ci dwaj się przeplatają, a reszta się próbuje dopchać.
@@ -70,7 +71,7 @@ public class TestDeadlock2Simple2 extends Test {
 
         Worker[] workers = {new Worker(1, victim1), new Worker(2, victim2), new Worker(3, victim3), new Worker(4, victim4), new Worker(5, victim5), new Worker(6, victim6)};
 
-        SimulationWithBugCheck wrapper = new SimulationWithBugCheck(4, 100, workers, verbose, true);
+        SimulationWithBugCheck wrapper = new SimulationWithBugCheck(4, 100, workers, verbose, false);
         return wrapper.start();
     }
 }

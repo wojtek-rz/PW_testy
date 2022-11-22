@@ -16,6 +16,7 @@ public class Test18StarvationStar extends Test {
         Action[] workerActions = {
                 enter(0),
                 sleep(10),
+                use(),
                 leave()
         };
 
@@ -23,7 +24,7 @@ public class Test18StarvationStar extends Test {
             workers[i] = new Worker(i, workerActions);
         }
 
-
+//
         workers[100] = new Worker(100, concat(sleep(550), jumpBetween(1, 2, 10)));
         workers[101] = new Worker(101, concat(sleep(550), jumpBetween(1, 3, 10)));
         workers[102] = new Worker(102, concat(sleep(550), jumpBetween(1, 4, 10)));

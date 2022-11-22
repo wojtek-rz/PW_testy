@@ -109,9 +109,9 @@ public class SimulationWithBugCheck implements Workshop {
                 // We increase stored number of usages.
                 usagesOfWorkplace.put(this.id, usagesOfWorkplace.get(this.id) + 1);
 
-                if (verbose == 2) System.out.println("Worker " + currentWorkerId.id + " stops using workplace " + id.id );
                 mutex.release();
                 Thread.sleep(timeOfWork);
+                if (verbose == 2) System.out.println("Worker " + currentWorkerId.id + " stops using workplace " + id.id );
             } catch (InterruptedException e) {
                 throw new RuntimeException("Test panic - error in the tests. There should not be any interruption.");
             }
